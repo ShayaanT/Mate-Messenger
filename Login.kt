@@ -1,4 +1,4 @@
-ckage com.example.messagingapp
+package com.example.messagingapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
