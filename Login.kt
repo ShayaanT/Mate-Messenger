@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 
 class Login : AppCompatActivity() {
 
@@ -14,9 +16,13 @@ class Login : AppCompatActivity() {
     private lateinit var btnlogin: Button
     private lateinit var btnsignup: Button
 
+    private lateinit var mAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        mAuth = FirebaseAuth.getInstance()
 
         etemail = findViewById(R.id.etemail)
         etpassword = findViewById(R.id.etpassword)
@@ -28,14 +34,18 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnlogin.setOnClickListener {
+            val email = etemail.text.toString()
+            val password = etpassword.text.toString()
 
-
-
-
-
+            login(email, password);
+        }
 
 
 
 
     }
+
+
+
 }
