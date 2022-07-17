@@ -52,7 +52,9 @@
         android:layout_marginTop="20dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
-        android:background="@drawable/btn_background" />
+        android:background="@drawable/btn_background"
+        android:textColor="@color/white"/>
+
 
     <Button
         android:id="@+id/btnsignup"
@@ -65,6 +67,7 @@
         android:paddingLeft="42dp"
         android:paddingRight="42dp"
         android:text="Sign Up"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 
